@@ -3,10 +3,10 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "existingDataFactoryName": {
-        "value":"GET-PREREQ-dataFactoryName"
+        "value":"df-rdeuzccb72k6e"
       },
       "existingDataFactoryResourceGroup": {
-        "value":"GET-PREREQ-resourceGroupName"
+        "value":"myCentralUSResourceGroup"
       },
       "existingDataFactoryVersion": {
         "value":"V1"
@@ -24,16 +24,16 @@
         "value": "GEN-PASSWORD"
       },
       "existingVirtualNetworkName":{
-        "value": "GET-PREREQ-vnetName"
+        "value": "vnet-01"
       },
       "existingVnetResourceGroupName":{
-        "value": "GET-PREREQ-resourceGroupName"
+        "value": "myCentralUSResourceGroup"
       },
       "existingSubnetInYourVnet": {
-        "value": "GET-PREREQ-subnetName"
+        "value": "subnet01"
       },
       "existingVnetLocation": {
-        "value": "GET-PREREQ-vnetLocation"
+        "value": "uscentral"
       }
     }
   }

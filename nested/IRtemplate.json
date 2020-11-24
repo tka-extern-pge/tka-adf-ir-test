@@ -3,8 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "existingDataFactoryName": {
-        "type": "string",
-        "defaultValue": "df-rdeuzccb72k6e"
+        "type": "string"
       },
       "existingDataFactoryVersion": {
         "type": "string"
@@ -18,8 +17,8 @@
     "resources": [
       {
         "condition": "[equals(parameters('existingDataFactoryVersion'), 'V1')]",
-        "type": "Microsoft.DataFactory/factories/managedVirtualNetworks",
-        "apiVersion": "2018-06-01",
+        "type": "Microsoft.DataFactory/dataFactories/gateways",
+        "apiVersion": "2015-10-01",
         "name": "[concat(parameters('existingDataFactoryName'), '/', parameters('IntegrationRuntimeName'))]",
         "properties": {
           "multiNodeSupportEnabled": true,

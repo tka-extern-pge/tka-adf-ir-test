@@ -3,7 +3,8 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "existingDataFactoryName": {
-        "type": "string"
+        "type": "string",
+        "defaultValue": "df-rdeuzccb72k6e"
       },
       "existingDataFactoryVersion": {
         "type": "string"

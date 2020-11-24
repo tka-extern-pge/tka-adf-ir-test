@@ -34,6 +34,18 @@
       },
       "existingVnetLocation": {
         "value": "Central US"
+      },
+      "linkedVMTemplateURI": {
+        "value": "https://raw.githubusercontent.com/tka-extern-pge/tka-adf-ir-test/main/nested/VMtemplate.json?"
+      },
+      "linkedIRTemplate": {
+        "value": "https://raw.githubusercontent.com/tka-extern-pge/tka-adf-ir-test/main/nested/IRtemplate.json"
+      },
+      "linkedIRinstall": {
+        "value": "https://raw.githubusercontent.com/tka-extern-pge/tka-adf-ir-test/main/nested/IRInstall.json?"
+      },
+      "linkedScript": {
+        "value": "https://raw.githubusercontent.com/tka-extern-pge/tka-adf-ir-test/main/gatewayInstall.ps1?"
       }
     }
   }

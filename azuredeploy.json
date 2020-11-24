@@ -73,22 +73,36 @@
         }
       },
       "existingSubnetInYourVnet": {
-        "type": "string",
-        "metadata": {
-          "description": "Name of the subnet in the virtual network you want to use"
+      "type": "string",
+      "metadata": {
+        "description": "Name of the subnet in the virtual network you want to use"
         }
       },
-      "_artifactsLocation": {
+      "linkedVMTemplateURI": {
         "type": "string",
         "metadata": {
-          "description": "The base URI where artifacts required by this template are located."
+          "description": "Uri of the linked vm template"
         },
-        "defaultValue": "[deployment().properties.templateLink.uri]"
+        "defaultValue": ""
       },
-      "_artifactsLocationSasToken": {
-        "type": "securestring",
+      "linkedIRTemplate": {
+        "type": "string",
         "metadata": {
-          "description": "The sasToken required to access _artifactsLocation.  When the template is deployed using the accompanying scripts, a sasToken will be automatically generated."
+          "description": "Uri of the linked ir template"
+        },
+        "defaultValue": ""
+      },
+      "linkedIRinstall": {
+        "type": "string",
+        "metadata": {
+          "description": "link of the IR installation template"
+        },
+        "defaultValue": ""
+      },
+      "linkedScript": {
+        "type": "string",
+        "metadata": {
+          "description": "link of the gateway installation script"
         },
         "defaultValue": ""
       }
@@ -101,11 +115,11 @@
       "prefix": "[split(parameters('IntegrationRuntimeName'), variables('delimiters'))[0]]",
       "storageAccountName": "[take(concat(toLower(variables('prefix')), uniquestring(resourceGroup().id, parameters('IntegrationRuntimeName'))), 24)]",
       "networkSecurityGroupName": "[concat(parameters('IntegrationRuntimeName'), 'nsg')]",
-      "vmTemplateLink": "[uri(parameters('_artifactsLocation'), concat('nested/VMtemplate.json', parameters('_artifactsLocationSasToken')))]",
-      "irInstallTemplateLink": "[uri(parameters('_artifactsLocation'), concat('nested/IRInstall.json', parameters('_artifactsLocationSasToken')))]",
-      "IRtemplateLink": "[uri(parameters('_artifactsLocation'), concat('nested/IRtemplate.json', parameters('_artifactsLocationSasToken')))]",
+      "vmTemplateLink": "[concat('nested/VMtemplate.json', parameters('linkedVMTemplateURI'))]",
+      "irInstallTemplateLink": "[concat('nested/IRInstall.json', parameters('linkedIRinstall'))]",
+      "IRtemplateLink": "[concat('nested/IRtemplate.json', parameters('linkedIRTemplate'))]",
       "subnetId": "[resourceId(parameters('existingVnetResourceGroupName'), 'Microsoft.Network/virtualNetworks/subnets', parameters('existingVirtualNetworkName'), parameters('existingSubnetInYourVnet'))]",
-      "scriptURL": "[uri(parameters('_artifactsLocation'), concat('gatewayInstall.ps1', parameters('_artifactsLocationSasToken')))]"
+      "scriptURL": "[concat('gatewayInstall.ps1', parameters('linkedScript'))]"
     },
     "resources": [
       {

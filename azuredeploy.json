@@ -83,28 +83,28 @@
         "metadata": {
           "description": "Uri of the linked vm template"
         },
-        "defaultValue": ""
+        "defaultValue": "none"
       },
       "linkedIRTemplate": {
         "type": "string",
         "metadata": {
           "description": "Uri of the linked ir template"
         },
-        "defaultValue": ""
+        "defaultValue": "none"
       },
       "linkedIRinstall": {
         "type": "string",
         "metadata": {
           "description": "link of the IR installation template"
         },
-        "defaultValue": ""
+        "defaultValue": "none"
       },
       "linkedScript": {
         "type": "string",
         "metadata": {
           "description": "link of the gateway installation script"
         },
-        "defaultValue": ""
+        "defaultValue": "none"
       }
     },
     "variables": {
@@ -115,11 +115,11 @@
       "prefix": "[split(parameters('IntegrationRuntimeName'), variables('delimiters'))[0]]",
       "storageAccountName": "[take(concat(toLower(variables('prefix')), uniquestring(resourceGroup().id, parameters('IntegrationRuntimeName'))), 24)]",
       "networkSecurityGroupName": "[concat(parameters('IntegrationRuntimeName'), 'nsg')]",
-      "vmTemplateLink": "[concat('nested/VMtemplate.json', parameters('linkedVMTemplateURI'))]",
-      "irInstallTemplateLink": "[concat('nested/IRInstall.json', parameters('linkedIRinstall'))]",
-      "IRtemplateLink": "[concat('nested/IRtemplate.json', parameters('linkedIRTemplate'))]",
+      "vmTemplateLink": "[concat('', parameters('linkedVMTemplateURI'))]",
+      "irInstallTemplateLink": "[concat('', parameters('linkedIRinstall'))]",
+      "IRtemplateLink": "[concat('', parameters('linkedIRTemplate'))]",
       "subnetId": "[resourceId(parameters('existingVnetResourceGroupName'), 'Microsoft.Network/virtualNetworks/subnets', parameters('existingVirtualNetworkName'), parameters('existingSubnetInYourVnet'))]",
-      "scriptURL": "[concat('gatewayInstall.ps1', parameters('linkedScript'))]"
+      "scriptURL": "[concat('', parameters('linkedScript'))]"
     },
     "resources": [
       {

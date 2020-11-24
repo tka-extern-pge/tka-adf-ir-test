@@ -18,5 +18,10 @@ steps:
     location: 'Central US'
     templateLocation: 'Linked artifact'
     csmFile: 'azuredeploy.json'
-    overrideParameters: '-linkedVMTemplateURI https://raw.githubusercontent.com/tka-extern-pge/tka-adf-ir-test/main/nested/VMtemplate.json? -linkedIRTemplate https://raw.githubusercontent.com/tka-extern-pge/tka-adf-ir-test/main/nested/IRtemplate.json? -linkedIRinstall https://raw.githubusercontent.com/tka-extern-pge/tka-adf-ir-test/main/nested/IRInstall.json? -linkedScript https://raw.githubusercontent.com/tka-extern-pge/tka-adf-ir-test/main/gatewayInstall.ps1?'
+    csmParametersFile:  'azuredeploy.parameters.sjon'
+    overrideParameters: '
+      -linkedVMTemplateURI https://raw.githubusercontent.com/tka-extern-pge/tka-adf-ir-test/main/nested/VMtemplate.json? +
+      -linkedIRTemplate https://raw.githubusercontent.com/tka-extern-pge/tka-adf-ir-test/main/nested/IRtemplate.json? +
+      -linkedIRinstall https://raw.githubusercontent.com/tka-extern-pge/tka-adf-ir-test/main/nested/IRInstall.json? +
+      -linkedScript https://raw.githubusercontent.com/tka-extern-pge/tka-adf-ir-test/main/gatewayInstall.ps1?'
     deploymentMode: 'Incremental'

@@ -33,7 +33,7 @@
         "value": "subnet01"
       },
       "existingVnetLocation": {
-        "value": "uscentral"
+        "value": "Central US"
       }
     }
   }

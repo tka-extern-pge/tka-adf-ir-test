@@ -1,0 +1,22 @@
+# Starter pipeline
+
+
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Kostenlose Testversion(41860fc2-6fd3-4cf5-8b1a-35bd82315ceb)'
+    subscriptionId: '41860fc2-6fd3-4cf5-8b1a-35bd82315ceb'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'myCentralUSResourceGroup'
+    location: 'Central US'
+    templateLocation: 'Linked artifact'
+    csmFile: 'azuredeploy.json'
+    overrideParameters: '-linkedVMTemplateURI https://raw.githubusercontent.com/tka-extern-pge/tka-adf-ir-test/main/nested/VMtemplate.json? -linkedIRTemplate https://raw.githubusercontent.com/tka-extern-pge/tka-adf-ir-test/main/nested/IRtemplate.json? -linkedIRinstall https://raw.githubusercontent.com/tka-extern-pge/tka-adf-ir-test/main/nested/IRInstall.json? -linkedScript https://raw.githubusercontent.com/tka-extern-pge/tka-adf-ir-test/main/gatewayInstall.ps1?'
+    deploymentMode: 'Incremental'

@@ -9,7 +9,7 @@
         "value":"myCentralUSResourceGroup"
       },
       "existingDataFactoryVersion": {
-        "value":"V2"
+        "value":"V1"
       },
       "IntegrationRuntimeName": {
         "value":"GEN-UNIQUE"

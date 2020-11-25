@@ -6,46 +6,46 @@
         "value":"df-rdeuzccb72k6e"
       },
       "existingDataFactoryResourceGroup": {
-        "value":"myCentralUSResourceGroup"
+        "value":"tka-ingestion-stage"
       },
       "existingDataFactoryVersion": {
-        "value":"V1"
+        "value":"V2"
       },
       "IntegrationRuntimeName": {
-        "value":"GEN-UNIQUE"
+        "value":"tka-uk-erp-ir"
       },
       "NodeCount":{
         "value": 1
       },
       "adminUserName": {
-        "value": "GEN-UNIQUE"
+        "value": "TKAirT3st"
       },
       "adminPassword": {
-        "value": "GEN-PASSWORD"
+        "value": "tk4-sh4d0W"
       },
       "existingVirtualNetworkName":{
-        "value": "vnet-01"
+        "value": "tka-ingestion-stage-vnet"
       },
       "existingVnetResourceGroupName":{
-        "value": "myCentralUSResourceGroup"
+        "value": "tka-ingestion-stage"
       },
       "existingSubnetInYourVnet": {
-        "value": "subnet01"
+        "value": "adf-ir-vm-subnet"
       },
       "existingVnetLocation": {
-        "value": "Central US"
+        "value": "northeurope"
       },
       "linkedVMTemplateURI": {
-        "value": "https://raw.githubusercontent.com/tka-extern-pge/tka-adf-ir-test/main/nested/VMtemplate.json?"
+        "value": "none"
       },
       "linkedIRTemplate": {
-        "value": "https://raw.githubusercontent.com/tka-extern-pge/tka-adf-ir-test/main/nested/IRtemplate.json"
+        "value": "none"
       },
       "linkedIRinstall": {
-        "value": "https://raw.githubusercontent.com/tka-extern-pge/tka-adf-ir-test/main/nested/IRInstall.json?"
+        "value": "none"
       },
       "linkedScript": {
-        "value": "https://raw.githubusercontent.com/tka-extern-pge/tka-adf-ir-test/main/gatewayInstall.ps1?"
+        "value": "none"
       }
     }
   }

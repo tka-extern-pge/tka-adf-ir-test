@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "existingDataFactoryName": {
-        "value":"df-rdeuzccb72k6e"
+        "value":"df-ptxnfj76y67da"
       },
       "existingDataFactoryResourceGroup": {
         "value":"tka-ingestion-stage"

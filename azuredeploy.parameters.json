@@ -36,16 +36,16 @@
         "value": "northeurope"
       },
       "linkedVMTemplateURI": {
-        "value": "none"
+        "value": "https://raw.githubusercontent.com/tka-extern-pge/tka-adf-ir-test/main/nested/VMtemplate.json?"
       },
       "linkedIRTemplate": {
-        "value": "none"
+        "value": "https://raw.githubusercontent.com/tka-extern-pge/tka-adf-ir-test/main/nested/IRtemplate.json"
       },
       "linkedIRinstall": {
-        "value": "none"
+        "value": "https://raw.githubusercontent.com/tka-extern-pge/tka-adf-ir-test/main/nested/IRInstall.json?"
       },
       "linkedScript": {
-        "value": "none"
+        "value": "https://raw.githubusercontent.com/tka-extern-pge/tka-adf-ir-test/main/gatewayInstall.ps1?"
       }
     }
   }
